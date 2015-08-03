@@ -132,5 +132,11 @@ $('#toggle').click(function() {
    
   });
 
-// loader
+// Gallery
+$(function() {
+  $('a.gallery-image').on('click', function(){
+    $(this).toggleClass('zoomed');
+    return false;
+  });
+});
 
