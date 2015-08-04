@@ -63,7 +63,7 @@ body,html
   width: 100%
   position: relative
   display: inline-block
-  min-height: 100vh
+  
   padding: 60px 0px
 header
   width: 100%
@@ -73,6 +73,10 @@ header
   top: 0
   padding: 36px 0px
   z-index: 2
+  -webkit-transition: all 0.4s ease-in-out
+  -moz-transition: all 0.4s ease-in-out
+  -ms-transition: all 0.4s ease-in-out
+  -o-transition: all 0.4s ease-in-out
   .header-wrapper
     width: 80%
     height: inherit
@@ -84,14 +88,14 @@ header
       padding: 10px
       border: 1px solid #ffffff
       img
-        height: 60px
+        height: 40px
         width: auto
 
     nav
       text-align: right
       float: right
       ul
-        padding: 14px 5px
+        padding: 28px 5px
         li
           list-style: none
           display: inline
@@ -271,6 +275,17 @@ header
   -webkit-box-shadow: 0 7px 0px -4px rgba(0,0,0,0.2)
   -moz-box-shadow: 0 7px 0px -4px rgba(0,0,0,0.2)
   box-shadow: 0 7px 0px -4px rgba(0,0,0,0.2)
+  -webkit-transition: .3s ease-in-out
+  -moz-transition: .3s ease-in-out
+  -o-transition: .3s ease-in-out
+  transition: 0.3s
+  &:hover
+    -webkit-transition: .3s ease-in-out
+    -moz-transition: .3s ease-in-out
+    -o-transition: .3s ease-in-out
+    transition: 0.3s
+    border: 6px $main-blue solid
+    cursor: pointer
 .aboutme-header
   font-family: $roboto
   font-weight: 700
@@ -332,12 +347,12 @@ header
   width: 50px
   height: auto
   display: inline-block
-
+  position: relative
   margin: 10px
   .s-icon
     fill: $main-blue
 .skills-section
-  margin-bottom: 40px
+  margin-bottom: 60px
 .testimonial-page-title
  
   margin: 0 auto
@@ -354,6 +369,7 @@ header
   height: auto
   padding: 60px
   width: 100%
+  margin: 60px 0px
   display: inline-block
   .client-page-content
     width: 80%
@@ -514,6 +530,9 @@ header
   p
     padding: 45px
     margin: 0
+    font-weight: 300
+    font-family: $roboto
+    color: $main-gray
 
 //Links
 .expand-about
@@ -550,11 +569,15 @@ header
     margin-right: -20px
 
 header.sticky
-  padding: 16px 0px
+  padding: 10px 0px
   height: 100px
   background: none
+  border-bottom: 1px rgba(177,155,116,0.8) solid
   transition: all 0.9s ease-in-out
-  color: #919191
+  color: red!important
+  a
+    color: red
+  
 
 
 
@@ -679,16 +702,18 @@ $button-width: 35px
 .sep
   width: 40px
   height: 2px
-  background: $main-gray
+  background: $alt-color
   opacity: 0.6
   margin: 40px auto
   text-align: center
 .center
   text-align: center
   margin: 0 auto
+  position: relative
 
 a.gallery-image
   text-decoration: none
+  
   img
     margin: 5px
     height: 300px
@@ -715,3 +740,452 @@ a.gallery-image
       min-height: 50%
       z-index: 9999
       object-fit: contain
+.gallery-overlay
+  position: relative
+  height: 300px
+  width: 400px
+.gallery-mask
+  background: rgba(0,0,0,0.5)
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.lightvox
+  #modalTitle
+    color: $main-blue
+    font-family: $roboto
+    font-weight: 700
+  .lead
+    font-family: $roboto
+    font-weight: 300
+    color: $main-gray
+    font-size: 12pt
+  .modal-content
+    font-family: $roboto
+    font-weight: 100
+    color: $main-gray
+    font-size: 12pt
+
+  a
+    -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    display: block
+    margin: 20px auto
+    max-width: 180px
+    text-decoration: none
+    border-radius: 4px
+    padding: 20px 30px
+    font-family: $roboto
+    font-weight: 300
+
+    &.button
+      border-color: none!important
+      color: rgba(255,255,255,1)
+      &:hover
+        color: rgba(255, 255, 255, 0.85)
+        box-shadow: $alt-color 0 0px 0px 40px inset
+.dl-resume
+  display: inline-block
+  a
+    -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    display: block
+    margin: 20px auto
+    max-width: 220px
+    text-decoration: none
+    border-radius: 4px
+    padding: 20px 30px
+    font-family: $roboto
+    font-weight: 300
+
+    &.button
+      border-color: none!important
+      color: rgba(255,255,255,1)
+      background: $main-blue
+      &:hover
+        color: rgba(255, 255, 255, 0.85)
+        box-shadow: $alt-color 0 0px 0px 40px inset
+pull-l
+  float: left
+  margin-right: 10px
+
+a.kyoo-tooltip
+
+/* =Kyoo Tooltip style
+ */* You may grab the code from here on
+ */* -----------------------------------
+
+/* Tooltip wrapper -------
+/* Add this class to HTML element you so desire Kyoo Tooltip to appear
+
+.kyoo-tooltip
+  position: relative
+  .kyootip
+    opacity: 0
+    pointer-events: none
+    visibility: hidden
+    z-index: 99999
+    -webkit-transition: .3s ease-in-out
+    -moz-transition: .3s ease-in-out
+    -o-transition: .3s ease-in-out
+    transition: 0.3s
+  &:hover .kyootip
+    opacity: 1
+    visibility: visible
+
+/* Kyoo Tooltip base style -------
+
+.kyootip
+  color: $alt-color
+  font-family: $roboto
+  font-weight: 300
+  border: 2px $alt-color solid
+  padding: 6px 10px
+  position: absolute
+  text-align: center
+  text-decoration: none
+  text-shadow: none
+  z-index: 4
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  -o-border-radius: 3px
+  border-radius: 3px
+  
+  &:after
+    content: " "
+    font-size: 0
+    line-height: 0
+    position: absolute
+    width: 0
+    z-index: 1
+
+
+.kyootip--bottom
+  top: 130%
+  left: -25px
+  margin-top: -10px
+  margin-left: 0px
+  width: 100px
+  &:after
+    border-bottom: 5px solid $alt-color
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    top: -5px
+    left: 50%
+    margin-left: -5px
+
+/* Tooltip arrow
+
+/* When hovered, move tooltip at the bottom
+
+.kyoo-tooltip:hover .kyootip--bottom
+  margin-top: 0
+.social
+  text-align: center
+  font-size: 2em
+  color: $main-gray
+  overflow: hidden
+  display: list-item
+  a
+    color: inherit
+    text-decoration: none
+  i
+    margin: .3em
+    cursor: pointer
+    transition: color 300ms ease, margin-top 300ms ease
+    transform: translateZ(0)
+    &:hover
+      margin-top: -1px
+   
+    &#github:hover
+      color: black
+    &#linkedin:hover
+      color: #0177B5
+    &#mail:hover
+      color: #F7B401
+.hidden-nav 
+  position: fixed
+  width: 100%
+  margin: 0 auto
+  z-index: 56
+  -webkit-transition: all 0.4s ease-in-out
+  -moz-transition: all 0.4s ease-in-out
+  -ms-transition: all 0.4s ease-in-out
+  -o-transition: all 0.4s ease-in-out
+  transition: all 0.4s ease-in-out
+  -webkit-backface-visibility: hidden
+  -webkit-transform: translateZ(0)
+  .noshow-wrapper
+    width: 80%
+    margin: 0 auto
+
+    .logo
+      float: left
+      margin: 10px
+      text-align: center
+    
+      padding: 10px
+      margin: 10px
+      border: 1px solid $alt-color
+
+    img
+      height: 40px
+    nav
+      text-align: right
+      float: right
+      ul
+        padding: 28px 5px
+        li
+          list-style: none
+          display: inline
+          padding: 6px 20px
+          border-bottom: 1px rgba(255,255,255,0) solid
+         
+          &:hover
+            border-bottom: 1px $alt-color solid
+            transition: all 0.4s ease-in-out
+            cursor: pointer
+          &:hover a
+            color: $alt-color
+          &:hover a > nav ul li 
+            
+        a
+          font-size: 12pt
+          text-decoration: none
+          color: $main-gray
+              
+          font-family: $roboto
+          letter-spacing: 2px
+          font-weight: 300
+                  
+        a:hover
+          color: $main-gray
+  .get-started-2
+    floar: right
+    z-index: 7
+
+.hidden
+  display: none
+  transition: all 4s ease-in-out
+  visibility: hidden
+  height: 0
+  width: 0
+#mydiv
+  width: 100%
+  height: 120px
+
+  background: rgba(0,0,0,0)
+  position: absolute
+  bottom: 0
+.contact-page-content
+  .form-container
+    width: 30%
+    margin: 0 auto
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+
+  li
+    position: relative
+
+  form
+    border-radius: 0 0 5px 5px
+    border-top: none
+    background: #fff
+
+  ul li:not(:last-child)
+    display: block
+    border-bottom: 1px solid #ccc
+    
+
+  label
+    display: block
+    font-size: .8125em
+    /* 13/16
+    position: absolute
+    top: 1.2em
+    left: 1em
+    color: $alt-color
+    opacity: 1
+    transition: top 0.4s ease, opacity 0.6s ease , color 0.4s ease
+
+  input,textarea
+    display: block
+    width: 100%
+    height: 100%
+    border: 0
+    outline: none
+    padding: 3.25em 1em 1em
+    font-size: 10pt
+    font-family: $roboto
+    font-weight: 300
+    color: $main-gray
+
+  textarea
+    height: 16em
+    resize: none
+    font-size: 10pt
+    font-family: $roboto
+    padding-left: 0.85em
+  a.button
+    a
+    -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36)
+    display: block
+    margin: 20px auto
+    max-width: 220px
+    text-decoration: none
+    border-radius: 4px
+    padding: 5px 30px
+    font-family: $roboto
+    font-weight: 300
+
+    &.button
+      border-color: none!important
+      color: rgba(255,255,255,1)
+
+      background: $main-blue
+      &:hover
+        color: rgba(255, 255, 255, 0.85)
+        box-shadow: $alt-color 0 0px 0px 40px inset
+  input[type="submit"]
+    display: block
+    background: none
+    padding: 10px 0px
+    font-size: 12pt
+    margin: 0
+    color: #ffffff
+  .js-hide-label label
+    opacity: 0
+    top: 0.6em
+
+  .js-unhighlight-label label
+    color: $main-blue
+    font-family: $roboto
+    font-weight: 300
+
+  .js-highlight-label label
+    color: $alt-color
+    font-family: $roboto
+    font-weight: 300
+.button_container.sticky
+  background: radikal-mediumuploaded_file
+
+.button_container
+  visibility: hidden
+  position: fixed
+  top: 4%
+  right: 5%
+  height: $button-height
+  width: $button-width
+  cursor: pointer
+  z-index: 100
+  transition: opacity .25s ease
+  &:hover
+    opacity: .7
+  &.active
+    .top
+      transform: translateY(11px) translateX(0) rotate(45deg)
+      background: $color-active
+    .middle
+      opacity: 0
+      background: $color-active
+    .bottom
+      transform: translateY(-11px) translateX(0) rotate(-45deg)
+      background: $color-active
+  span
+    background: $main-gray
+    border: none
+    height: 5px
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    transition: all .35s ease
+    cursor: pointer
+    &:nth-of-type(2)
+      top: 11px
+    &:nth-of-type(3)
+      top: 22px
+
+.overlay
+  position: fixed
+  background: $color-main
+  top: 0
+  left: 0
+  width: 100%
+  height: 0%
+  opacity: 0
+  visibility: hidden
+  transition: opacity .35s, visibility .35s, height .35s
+  overflow: hidden
+  z-index: 4
+  &.open
+    opacity: 1
+    visibility: visible
+    height: 100%
+    li
+      animation: fadeInRight .5s ease forwards
+      animation-delay: .35s
+      &:nth-of-type(2)
+        animation-delay: .4s
+      &:nth-of-type(3)
+        animation-delay: .45s
+      &:nth-of-type(4)
+        animation-delay: .50s
+  nav
+    position: relative
+    height: 70%
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 14px
+    font-family: 'radikaluploaded_file'
+    font-weight: 400
+    text-align: center
+  ul
+    list-style: none
+    padding: 0
+    margin: 0 auto
+    display: inline-block
+    position: relative
+    height: 100%
+    li
+      display: block
+      height: 25%
+      height: calc(100% / 4)
+      min-height: 50px
+      position: relative
+      opacity: 1
+      a
+        display: block
+        position: relative
+        color: $color-link
+        text-decoration: none
+        overflow: hidden
+        &:hover:after,
+        &:focus:after,
+        &:active:after
+          width: 100%
+ 
+
+@keyframes fadeInRight
+  0%
+    opacity: 0
+    left: 20%
+  100%
+    opacity: 1
+    left: 0

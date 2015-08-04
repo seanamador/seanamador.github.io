@@ -1,3 +1,21 @@
+
+$({property: 0}).animate({property: 105}, {
+    duration: 4000,
+    step: function() {
+        var _percent = Math.round(this.property);
+        $('#progress').css('width',  _percent+"%");
+        if(_percent == 105) {
+            $("#progress").addClass("done");
+        }
+    },
+    complete: function() {
+       
+        $('.wrapper').css('visibility','visible').fadeIn(300);
+        $('.loader-div').fadeOut(300);
+        $('body').css('position','relative');
+        $('html').css('position','relative');
+    }
+});
 jQuery(window).load(function () {
     $('.wrapper').css('visibility','visible');
     $('.loader-div').fadeOut(300);
@@ -53,14 +71,14 @@ $(".expand-about").click(function () {
     $(".about-page-content-3").css ("display","inline-block");
 });
 
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('header').addClass("sticky");
-  }
-  else{
-    $('header').removeClass("sticky");
-  }
-});
+// $(window).scroll(function() {
+// if ($(this).scrollTop() > 1){  
+//     $('header').addClass("sticky");
+//   }
+//   else{
+//     $('header').removeClass("sticky");
+//   }
+// });
 
 
 
@@ -132,11 +150,97 @@ $('#toggle').click(function() {
    
   });
 
-// Gallery
-$(function() {
-  $('a.gallery-image').on('click', function(){
-    $(this).toggleClass('zoomed');
-    return false;
-  });
-});
 
+$(function() {
+
+  // Scroll smoothly
+  $('[data-smooth-scroll]').on('click', function(e) {
+    var targetEl = $($(this).attr('href'))
+
+    // Make sure the target is on this page
+    if (targetEl.length < 1) return
+
+    $('body, html').animate({scrollTop: targetEl.offset().top}, 800)
+
+    e.preventDefault()
+  })
+
+})
+$(document).ready(function() {
+ $(".hidden-nav").css('transform','translateY(-150px)');
+    var topOfOthDiv = $("#mydiv").offset().top;
+    $(window).scroll(function() {
+        if($(window).scrollTop() > topOfOthDiv) { 
+            $(".hidden-nav").css('-webkit-transform','translateY(30px)');
+            $(".hidden-nav").css('-moz-transform','translateY(30px)'); 
+            $(".hidden-nav").css('-o-transform','translateY(30px)'); 
+            $(".hidden-nav").css('-ms-transform','translateY(30px)'); 
+            $(".hidden-nav").css('transform','translateY(30px)'); 
+
+            $("header").css('-webkit-transform','translateY(-130px)');
+            $("header").css('-moz-transform','translateY(-130px)');
+            $("header").css('-o-transform','translateY(-130px)');
+            $("header").css('-ms-transform','translateY(-130px)');
+            $("header").css('transform','translateY(-130px)');           
+        }
+        else{
+            
+            $(".hidden-nav").css('-webkit-transform','translateY(-130px)');
+            $(".hidden-nav").css('-moz-transform','translateY(-130px)');
+            $(".hidden-nav").css('-o-transform','translateY(-130px)');
+            $(".hidden-nav").css('-ms-transform','translateY(-130px)');
+            $(".hidden-nav").css('transform','translateY(-130px)');
+
+            $("header").css('-webkit-transform','translateY(0px)');
+            $("header").css('-moz-transform','translateY(0px)');
+            $("header").css('-o-transform','translateY(0px)');
+            $("header").css('-ms-transform','translateY(0px)');
+            $("header").css('transform','translateY(0px)');
+        }
+        
+    });
+});
+$(document).ready(function(){
+  
+  //Hiding Labels Initially
+  $('form li').each(function(){
+    $(this).addClass('js-hide-label');
+  });
+  
+  //Now adding and removing classes on Events - keyup,blur,focus
+  $('form li').find('input,textarea').on('keyup blur focus',function(e) {
+    
+      var $this = $(this),
+          $parent = $this.parent();
+      
+      if(e.type=='keyup') {
+          if($this.val()==''){
+            $parent.addClass('js-hide-label');
+          }
+          else{
+            $parent.removeClass('js-hide-label') ;
+          }
+      }
+    else if(e.type=='blur'){
+      if($this.val()==''){
+        $parent.addClass('js-hide-label');
+      }
+      else{
+        $parent.removeClass('js-hide-label , js-highlight-label').addClass('js-unhighlight-label');
+      }
+    }
+    
+      else if(e.type=='focus'){
+        
+        if($this.val()==''){
+          $parent.addClass('js-hide-label');
+        }
+        else{
+        $parent.addClass('js-highlight-label');
+        }
+        
+      }
+    
+  });
+  
+});
