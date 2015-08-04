@@ -34,7 +34,10 @@
   .client {
     width: 100%;
     display: inline-block;
-    margin: 20px 0px; } }
+    margin: 20px 0px; }
+
+  .hidden-nav nav {
+    visibility: hidden; } }
 @media all and (max-width: 480px) {
   .button_container {
     visibility: visible; }
@@ -71,7 +74,10 @@
   .client {
     width: 100%;
     display: inline-block;
-    margin: 20px 0px; } }
+    margin: 20px 0px; }
+
+  .hidden-nav nav {
+    visibility: hidden; } }
 /* Landscape phones and portrait tablets */
 @media all and (min-width: 480px) and (max-width: 768px) {
   .button_container {
@@ -109,7 +115,10 @@
   .client {
     width: 100%;
     display: inline-block;
-    margin: 20px 0px; } }
+    margin: 20px 0px; }
+
+  .hidden-nav nav {
+    visibility: hidden; } }
 @media all and (min-width: 768px) and (max-width: 1024px) {
   header .header-wrapper {
     width: 95%; }

@@ -550,9 +550,8 @@ header {
     margin-right: -20px; } }
 header.sticky {
   padding: 10px 0px;
-  height: 100px;
+  height: 100%;
   background: none;
-  border-bottom: 1px rgba(177, 155, 116, 0.8) solid;
   transition: all 0.9s ease-in-out;
   color: red !important; }
   header.sticky a {
@@ -564,8 +563,8 @@ header.sticky {
 .button_container {
   visibility: hidden;
   position: fixed;
-  top: 2.8%;
-  right: 2%;
+  top: 8%;
+  right: 5%;
   height: 27px;
   width: 35px;
   cursor: pointer;
@@ -583,7 +582,8 @@ header.sticky {
     transform: translateY(-11px) translateX(0) rotate(-45deg);
     background: white; }
   .button_container span {
-    background: rgba(0, 0, 0, 0.8);
+    background: #919191;
+    border-radius: 2px;
     border: none;
     height: 5px;
     width: 100%;
@@ -627,10 +627,11 @@ header.sticky {
     height: 70%;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 14px;
-    font-family: "Vollkorn", serif;
-    font-weight: 400;
-    text-align: center; }
+    font-size: 16pt;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 4px; }
   .overlay ul {
     list-style: none;
     padding: 0;
@@ -880,7 +881,7 @@ pull-l {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0); }
   .hidden-nav .noshow-wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto; }
     .hidden-nav .noshow-wrapper .logo {
       float: left;
@@ -1017,109 +1018,6 @@ pull-l {
   font-family: "Roboto", sans-serif;
   font-weight: 300; }
 
-.button_container.sticky {
-  background: radikal-mediumuploaded_file; }
-
-.button_container {
-  visibility: hidden;
-  position: fixed;
-  top: 4%;
-  right: 5%;
-  height: 27px;
-  width: 35px;
-  cursor: pointer;
-  z-index: 100;
-  transition: opacity 0.25s ease; }
-  .button_container:hover {
-    opacity: 0.7; }
-  .button_container.active .top {
-    transform: translateY(11px) translateX(0) rotate(45deg);
-    background: white; }
-  .button_container.active .middle {
-    opacity: 0;
-    background: white; }
-  .button_container.active .bottom {
-    transform: translateY(-11px) translateX(0) rotate(-45deg);
-    background: white; }
-  .button_container span {
-    background: #919191;
-    border: none;
-    height: 5px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.35s ease;
-    cursor: pointer; }
-    .button_container span:nth-of-type(2) {
-      top: 11px; }
-    .button_container span:nth-of-type(3) {
-      top: 22px; }
-
-.overlay {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.8);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-  overflow: hidden;
-  z-index: 4; }
-  .overlay.open {
-    opacity: 1;
-    visibility: visible;
-    height: 100%; }
-    .overlay.open li {
-      animation: fadeInRight 0.5s ease forwards;
-      animation-delay: 0.35s; }
-      .overlay.open li:nth-of-type(2) {
-        animation-delay: 0.4s; }
-      .overlay.open li:nth-of-type(3) {
-        animation-delay: 0.45s; }
-      .overlay.open li:nth-of-type(4) {
-        animation-delay: 0.5s; }
-  .overlay nav {
-    position: relative;
-    height: 70%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    font-family: "radikaluploaded_file";
-    font-weight: 400;
-    text-align: center; }
-  .overlay ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: inline-block;
-    position: relative;
-    height: 100%; }
-    .overlay ul li {
-      display: block;
-      height: 25%;
-      height: calc(100% / 4);
-      min-height: 50px;
-      position: relative;
-      opacity: 1; }
-      .overlay ul li a {
-        display: block;
-        position: relative;
-        color: white;
-        text-decoration: none;
-        overflow: hidden; }
-        .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-          width: 100%; }
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    left: 20%; }
-  100% {
-    opacity: 1;
-    left: 0; } }
 body {
   padding: 0 !important; }
 
