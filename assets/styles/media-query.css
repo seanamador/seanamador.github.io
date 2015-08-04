@@ -37,7 +37,10 @@
     margin: 20px 0px; }
 
   .hidden-nav nav {
-    visibility: hidden; } }
+    visibility: hidden; }
+
+  .logo {
+    display: none !important; } }
 @media all and (max-width: 480px) {
   .button_container {
     visibility: visible; }
@@ -77,7 +80,10 @@
     margin: 20px 0px; }
 
   .hidden-nav nav {
-    visibility: hidden; } }
+    visibility: hidden; }
+
+  .logo {
+    display: none !important; } }
 /* Landscape phones and portrait tablets */
 @media all and (min-width: 480px) and (max-width: 768px) {
   .button_container {
