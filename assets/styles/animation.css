@@ -18,19 +18,15 @@
   margin: auto;
   text-align: center;
 }
-.loading-text{
-	color:#fff;
-	letter-spacing: 4px;
-	padding: 4px;
-}
+
 #border {
-  border: 3px solid #fff;
-  border-radius: 10px;
+  border: 1px solid #fff;
+  border-radius: 6px;
   height: 100%;
   width: 100%;
   position: relative;
   
-  padding: 4px 3px;
+  padding: 6px 3px;
 }
 
 #whitespace {
@@ -43,7 +39,7 @@
 
 #line {
   position: absolute;
-  border-radius: 10px;
+  border-radius: 6px;
   height: 100%;
   width: 100%;
   background-color: #fff;

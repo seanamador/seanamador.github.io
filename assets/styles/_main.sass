@@ -8,6 +8,13 @@ body,html
   height: 100%
   position: fixed
   background: #ffffff!important
+.loading-text
+  color: #fff
+  letter-spacing: 4px
+  padding: 4px
+  font-family: $roboto
+  font-weight: 100
+  font-size: 16pt
 #map-canvas
   width: 100%
   height: 300px
@@ -27,6 +34,7 @@ body,html
   background: url('../images/wallpaper-mac.png')no-repeat
   background-size: cover
   background-position: center
+  border-bottom: 2px #ccc solid
 .about-page
   height: auto
   width: 100%
@@ -34,6 +42,7 @@ body,html
   display: inline-block
   min-height: 100vh
   padding: 60px 0px
+  border-top: 1px $main-blue solid
 .service-page
   height: auto
   width: 100%
@@ -78,7 +87,7 @@ header
   -ms-transition: all 0.4s ease-in-out
   -o-transition: all 0.4s ease-in-out
   .header-wrapper
-    width: 80%
+    width: 90%
     height: inherit
     margin: 0 auto
     .logo
@@ -101,26 +110,46 @@ header
           display: inline
           padding: 6px 20px
           border-bottom: 1px rgba(255,255,255,0) solid
-         
+          -webkit-transition: .4s ease-in-out
+          -moz-transition: .4s ease-in-out
+          -o-transition: .4s ease-in-out
+          transition: 0.4s
           &:hover
             border-bottom: 1px #fff solid
-            transition: all 0.4s ease-in-out
+            -webkit-transition: .4s ease-in-out
+            -moz-transition: .4s ease-in-out
+            -o-transition: .4s ease-in-out
+            transition: 0.4s
             cursor: pointer
           &:hover a
             color: #000
+            -webkit-transition: .4s ease-in-out
+            -moz-transition: .4s ease-in-out
+            -o-transition: .4s ease-in-out
+            transition: 0.4s
           &:hover a > nav ul li 
-            
+            -webkit-transition: .4s ease-in-out
+            -moz-transition: .4s ease-in-out
+            -o-transition: .4s ease-in-out
+            transition: 0.4s
         a
           font-size: 12pt
           text-decoration: none
           color: rgba(255,255,255,0.5)
-              
+          -webkit-transition: .4s ease-in-out
+          -moz-transition: .4s ease-in-out
+          -o-transition: .4s ease-in-out
+          transition: 0.4s    
           font-family: $roboto
           letter-spacing: 2px
           font-weight: 300
                   
         a:hover
           color: rgba(255,255,255,1)
+          -webkit-transition: .4s ease-in-out
+          -moz-transition: .4s ease-in-out
+          -o-transition: .4s ease-in-out
+          transition: 0.4s
 .landing-logo
   height: 350px
   max-width: none
@@ -365,12 +394,14 @@ header
   position: relative
   bottom: 0
   left: 0
-  background: $main-blue
+  background: #efefef
   height: auto
-  padding: 60px
+  padding: 60px 0px 100px 0px
   width: 100%
-  margin: 60px 0px
+  margin: 120px 0px 20px 0px 
   display: inline-block
+  border-top: 2px #e2e2e2 solid
+  border-bottom: 2px #e2e2e2 solid
   .client-page-content
     width: 80%
     margin: 0 auto
@@ -384,6 +415,7 @@ header
           img
             height: 100px
             width: auto
+            opacity: 0.4
 
 #testimonials
   height: 80%
@@ -954,23 +986,45 @@ a.kyoo-tooltip
          
           &:hover
             border-bottom: 1px $alt-color solid
+            -webkit-transition: all 0.4s ease-in-out
+            -moz-transition: all 0.4s ease-in-out
+            -ms-transition: all 0.4s ease-in-out
+            -o-transition: all 0.4s ease-in-out
             transition: all 0.4s ease-in-out
             cursor: pointer
           &:hover a
             color: $alt-color
+            -webkit-transition: all 0.4s ease-in-out
+            -moz-transition: all 0.4s ease-in-out
+            -ms-transition: all 0.4s ease-in-out
+            -o-transition: all 0.4s ease-in-out
+            transition: all 0.4s ease-in-out
           &:hover a > nav ul li 
-            
+            -webkit-transition: all 0.4s ease-in-out
+            -moz-transition: all 0.4s ease-in-out
+            -ms-transition: all 0.4s ease-in-out
+            -o-transition: all 0.4s ease-in-out
+            transition: all 0.4s ease-in-out
         a
           font-size: 12pt
           text-decoration: none
           color: $main-gray
-              
+          -webkit-transition: all 0.4s ease-in-out
+          -moz-transition: all 0.4s ease-in-out
+          -ms-transition: all 0.4s ease-in-out
+          -o-transition: all 0.4s ease-in-out
+          transition: all 0.4s ease-in-out   
           font-family: $roboto
           letter-spacing: 2px
           font-weight: 300
                   
         a:hover
           color: $main-gray
+          -webkit-transition: all 0.4s ease-in-out
+          -moz-transition: all 0.4s ease-in-out
+          -ms-transition: all 0.4s ease-in-out
+          -o-transition: all 0.4s ease-in-out
+          transition: all 0.4s ease-in-out   
   .get-started-2
     floar: right
     z-index: 7

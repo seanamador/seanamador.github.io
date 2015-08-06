@@ -10,6 +10,14 @@ body, html {
   position: fixed;
   background: #ffffff !important; }
 
+.loading-text {
+  color: #fff;
+  letter-spacing: 4px;
+  padding: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 16pt; }
+
 #map-canvas {
   width: 100%;
   height: 300px; }
@@ -30,7 +38,8 @@ body, html {
   position: relative;
   background: url("../images/wallpaper-mac.png") no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  border-bottom: 2px #ccc solid; }
 
 .about-page {
   height: auto;
@@ -38,7 +47,8 @@ body, html {
   position: relative;
   display: inline-block;
   min-height: 100vh;
-  padding: 60px 0px; }
+  padding: 60px 0px;
+  border-top: 1px #505f75 solid; }
 
 .service-page {
   height: auto;
@@ -84,7 +94,7 @@ header {
   -ms-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out; }
   header .header-wrapper {
-    width: 80%;
+    width: 90%;
     height: inherit;
     margin: 0 auto; }
     header .header-wrapper .logo {
@@ -105,22 +115,46 @@ header {
           list-style: none;
           display: inline;
           padding: 6px 20px;
-          border-bottom: 1px rgba(255, 255, 255, 0) solid; }
+          border-bottom: 1px rgba(255, 255, 255, 0) solid;
+          -webkit-transition: 0.4s ease-in-out;
+          -moz-transition: 0.4s ease-in-out;
+          -o-transition: 0.4s ease-in-out;
+          transition: 0.4s; }
           header .header-wrapper nav ul li:hover {
             border-bottom: 1px #fff solid;
-            transition: all 0.4s ease-in-out;
+            -webkit-transition: 0.4s ease-in-out;
+            -moz-transition: 0.4s ease-in-out;
+            -o-transition: 0.4s ease-in-out;
+            transition: 0.4s;
             cursor: pointer; }
           header .header-wrapper nav ul li:hover a {
-            color: #000; }
+            color: #000;
+            -webkit-transition: 0.4s ease-in-out;
+            -moz-transition: 0.4s ease-in-out;
+            -o-transition: 0.4s ease-in-out;
+            transition: 0.4s; }
+          header .header-wrapper nav ul li:hover a > nav ul li {
+            -webkit-transition: 0.4s ease-in-out;
+            -moz-transition: 0.4s ease-in-out;
+            -o-transition: 0.4s ease-in-out;
+            transition: 0.4s; }
         header .header-wrapper nav ul a {
           font-size: 12pt;
           text-decoration: none;
           color: rgba(255, 255, 255, 0.5);
+          -webkit-transition: 0.4s ease-in-out;
+          -moz-transition: 0.4s ease-in-out;
+          -o-transition: 0.4s ease-in-out;
+          transition: 0.4s;
           font-family: "Roboto", sans-serif;
           letter-spacing: 2px;
           font-weight: 300; }
         header .header-wrapper nav ul a:hover {
-          color: white; }
+          color: white;
+          -webkit-transition: 0.4s ease-in-out;
+          -moz-transition: 0.4s ease-in-out;
+          -o-transition: 0.4s ease-in-out;
+          transition: 0.4s; }
 
 .landing-logo {
   height: 350px;
@@ -354,12 +388,14 @@ header {
   position: relative;
   bottom: 0;
   left: 0;
-  background: #505f75;
+  background: #efefef;
   height: auto;
-  padding: 60px;
+  padding: 60px 0px 100px 0px;
   width: 100%;
-  margin: 60px 0px;
-  display: inline-block; }
+  margin: 120px 0px 20px 0px;
+  display: inline-block;
+  border-top: 2px #e2e2e2 solid;
+  border-bottom: 2px #e2e2e2 solid; }
   .client-page .client-page-content {
     width: 80%;
     margin: 0 auto; }
@@ -370,7 +406,8 @@ header {
       margin: 25px auto; }
       .client-page .client-page-content .clients .col-lg-3 .client-logo img {
         height: 100px;
-        width: auto; }
+        width: auto;
+        opacity: 0.4; }
 
 #testimonials {
   height: 80%;
@@ -904,19 +941,44 @@ pull-l {
           border-bottom: 1px rgba(255, 255, 255, 0) solid; }
           .hidden-nav .noshow-wrapper nav ul li:hover {
             border-bottom: 1px #B19B74 solid;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
             transition: all 0.4s ease-in-out;
             cursor: pointer; }
           .hidden-nav .noshow-wrapper nav ul li:hover a {
-            color: #B19B74; }
+            color: #B19B74;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out; }
+          .hidden-nav .noshow-wrapper nav ul li:hover a > nav ul li {
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out; }
         .hidden-nav .noshow-wrapper nav ul a {
           font-size: 12pt;
           text-decoration: none;
           color: #919191;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
           font-family: "Roboto", sans-serif;
           letter-spacing: 2px;
           font-weight: 300; }
         .hidden-nav .noshow-wrapper nav ul a:hover {
-          color: #919191; }
+          color: #919191;
+          -webkit-transition: all 0.4s ease-in-out;
+          -moz-transition: all 0.4s ease-in-out;
+          -ms-transition: all 0.4s ease-in-out;
+          -o-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out; }
   .hidden-nav .get-started-2 {
     floar: right;
     z-index: 7; }
