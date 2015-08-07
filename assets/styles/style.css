@@ -712,8 +712,14 @@ header.sticky {
   margin: 0 auto;
   position: relative; }
 
+.work-div {
+  margin: auto;
+  position: relative;
+  display: inline-flex; }
+
 a.gallery-image {
-  text-decoration: none; }
+  text-decoration: none;
+  position: relative; }
   a.gallery-image img {
     margin: 5px;
     height: 300px;
