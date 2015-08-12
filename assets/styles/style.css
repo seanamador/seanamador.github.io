@@ -56,7 +56,10 @@ body, html {
   position: relative;
   display: inline-block;
   min-height: 100vh;
-  padding: 60px 0px; }
+  padding: 60px 0px;
+  background: #efefef;
+  border-top: 1px #e2e2e2 solid;
+  border-bottom: 1px #e2e2e2 solid; }
 
 .testimonial-page {
   height: auto;
