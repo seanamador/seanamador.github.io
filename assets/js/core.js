@@ -5,7 +5,7 @@ $({property: 0}).animate({property: 105}, {
         var _percent = Math.round(this.property);
         $('#progress').css('width',  _percent+"%");
         if(_percent == 105) {
-            $("#progress").addClass("done");
+             $("#progress").addClass("done");
         }
     },
     complete: function() {
@@ -20,7 +20,7 @@ jQuery(window).load(function () {
     $('.wrapper').css('visibility','visible');
     $('.loader-div').fadeOut(300);
     $('body').css('position','relative');
-    $('html').css('position','relative');
+    $('html').css('position','relative'); 
 });
 
 
@@ -151,7 +151,15 @@ $(document).ready(function() {
     });
 });
 $(document).ready(function(){
-  
+  $('.owl-carousel').owlCarousel({
+    stagePadding: 200,
+    loop:false,
+    margin:0,
+    nav:false,
+    items:1,
+    lazyLoad: true,
+    nav:true
+})
   //Hiding Labels Initially
   $('form li').each(function(){
     $(this).addClass('js-hide-label');

@@ -1006,88 +1006,142 @@ pull-l {
   position: absolute;
   bottom: 0; }
 
-.contact-page-content .form-container {
-  width: 30%;
-  margin: 0 auto; }
-.contact-page-content ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-.contact-page-content li {
-  position: relative; }
-.contact-page-content form {
-  border-radius: 0 0 5px 5px;
-  border-top: none;
-  background: #fff; }
-.contact-page-content ul li:not(:last-child) {
-  display: block;
-  border-bottom: 1px solid #ccc; }
-.contact-page-content label {
-  display: block;
-  font-size: 0.8125em;
-  /* 13/16 */
-  position: absolute;
-  top: 1.2em;
-  left: 1em;
-  color: #B19B74;
+.contact-page-content {
+  opacity: 0.4;
+  transition: 0.4s ease all;
+  margin: 0 20px;
+  transform: scale(0.8); }
+  .contact-page-content .form-container {
+    width: 30%;
+    margin: 0 auto; }
+  .contact-page-content ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+  .contact-page-content li {
+    position: relative; }
+  .contact-page-content form {
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+    background: #fff; }
+  .contact-page-content ul li:not(:last-child) {
+    display: block;
+    border-bottom: 1px solid #ccc; }
+  .contact-page-content label {
+    display: block;
+    font-size: 0.8125em;
+    /* 13/16 */
+    position: absolute;
+    top: 1.2em;
+    left: 1em;
+    color: #B19B74;
+    opacity: 1;
+    transition: top 0.4s ease, opacity 0.6s ease, color 0.4s ease; }
+  .contact-page-content input, .contact-page-content textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    padding: 3.25em 1em 1em;
+    font-size: 10pt;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #919191; }
+  .contact-page-content textarea {
+    height: 16em;
+    resize: none;
+    font-size: 10pt;
+    font-family: "Roboto", sans-serif;
+    padding-left: 0.85em; }
+  .contact-page-content a.button {
+    -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    display: block;
+    margin: 20px auto;
+    max-width: 220px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 5px 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300; }
+    .contact-page-content a.button.button {
+      border-color: none !important;
+      color: white;
+      background: #505f75; }
+      .contact-page-content a.button.button:hover {
+        color: rgba(255, 255, 255, 0.85);
+        box-shadow: #B19B74 0 0px 0px 40px inset; }
+  .contact-page-content input[type="submit"] {
+    display: block;
+    background: none;
+    padding: 10px 0px;
+    font-size: 12pt;
+    margin: 0;
+    color: #ffffff; }
+  .contact-page-content .js-hide-label label {
+    opacity: 0;
+    top: 0.6em; }
+  .contact-page-content .js-unhighlight-label label {
+    color: #505f75;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300; }
+  .contact-page-content .js-highlight-label label {
+    color: #B19B74;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300; }
+
+@media (max-width: 1000px) {
+  .item {
+    margin: 0;
+    transform: scale(0.9); } }
+.active .item {
   opacity: 1;
-  transition: top 0.4s ease, opacity 0.6s ease, color 0.4s ease; }
-.contact-page-content input, .contact-page-content textarea {
+  transform: scale(1); }
+
+.owl-item {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1, 1); }
+
+.inner {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center; }
+  .inner a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease border-color; }
+    .inner a:hover {
+      border-color: #fff; }
+
+.black .inner a {
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.4); }
+  .black .inner a:hover {
+    border-color: #000; }
+
+.owl-carousel:after {
+  content: "";
   display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  outline: none;
-  padding: 3.25em 1em 1em;
-  font-size: 10pt;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #919191; }
-.contact-page-content textarea {
-  height: 16em;
-  resize: none;
-  font-size: 10pt;
-  font-family: "Roboto", sans-serif;
-  padding-left: 0.85em; }
-.contact-page-content a.button {
-  -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
-  display: block;
-  margin: 20px auto;
-  max-width: 220px;
-  text-decoration: none;
-  border-radius: 4px;
-  padding: 5px 30px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300; }
-  .contact-page-content a.button.button {
-    border-color: none !important;
-    color: white;
-    background: #505f75; }
-    .contact-page-content a.button.button:hover {
-      color: rgba(255, 255, 255, 0.85);
-      box-shadow: #B19B74 0 0px 0px 40px inset; }
-.contact-page-content input[type="submit"] {
-  display: block;
-  background: none;
-  padding: 10px 0px;
-  font-size: 12pt;
-  margin: 0;
-  color: #ffffff; }
-.contact-page-content .js-hide-label label {
-  opacity: 0;
-  top: 0.6em; }
-.contact-page-content .js-unhighlight-label label {
-  color: #505f75;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300; }
-.contact-page-content .js-highlight-label label {
-  color: #B19B74;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300; }
+  position: absolute;
+  width: 8%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -4%;
+  pointer-events: none;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/43033/aett_logo_slider.png) no-repeat center 50%;
+  background-size: 100% auto; }
+
+.owl-controls {
+  position: absolute;
+  margin-top: 300px; }
 
 body {
   padding: 0 !important; }
