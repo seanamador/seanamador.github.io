@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica', sans-serif; }
+
+body,
+html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff !important; }
+
+.background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+  z-index: 1; }
+
+.main-container {
+  height: auto;
+  width: 100%;
+  position: relative; }
+
+.filter-1 {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+  height: 75vh;
+  width: 100%; }
+
+.filter-2 {
+  background: rgba(71, 95, 119, 0.4);
+  position: fixed;
+  z-index: 2;
+  height: 75vh;
+  width: 100%; }
+
+.hero-section {
+  width: 40%;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  padding: 10vh 0;
+  z-index: 4; }
+  .hero-section .logo {
+    margin: 0 auto 100px;
+    text-align: center; }
+    .hero-section .logo img {
+      text-align: center;
+      height: 150px;
+      width: auto;
+      z-index: 4; }
+  .hero-section h1 {
+    color: #f3f3f3;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Helvetica';
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 1em 0; }
+  .hero-section p {
+    text-align: center;
+    color: #f3f3f3;
+    font-family: 'Helvetica';
+    font-weight: 100;
+    line-height: 24px; }
+
+.section-1 {
+  height: 75vh;
+  z-index: 1;
+  width: 100%; }
+  .section-1 .content-selector {
+    padding: 6em 0em;
+    margin: 0 auto;
+    text-align: center; }
+    .section-1 .content-selector .dev, .section-1 .content-selector .film {
+      display: inline;
+      margin: 0em 2em;
+      opacity: .28; }
+      .section-1 .content-selector .dev.active, .section-1 .content-selector .film.active {
+        opacity: 1; }
+      .section-1 .content-selector .dev:hover, .section-1 .content-selector .film:hover {
+        opacity: 1;
+        cursor: pointer; }
+    .section-1 .content-selector i {
+      color: #f3f3f3;
+      display: inline;
+      font-size: 40px; }
+
+.section-2 {
+  background: #f3f3f3;
+  height: 100vh;
+  z-index: 2;
+  position: relative; }
+
+/*# sourceMappingURL=style.css.map */
