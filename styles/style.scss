@@ -31,12 +31,14 @@ html {
     width: 100%;
     position: relative;
 }
-.content-wrapper{
+
+.content-wrapper {
     max-width: 1280px;
     margin: 0 auto;
 }
+
 .filter-1 {
-    background: rgba(0, 0, 0, 0.50);
+    background: rgba(0, 0, 0, 0.7);
     position: fixed;
     z-index: 2;
     height: 672px;
@@ -80,11 +82,12 @@ html {
     p {
         text-align: center;
         color: #f3f3f3;
-        font-family: 'Helvetica',sans-serif;
+        font-family: 'Helvetica', sans-serif;
         font-weight: 100;
         line-height: 24px;
     }
 }
+
 .content-selector {
     padding: 3em 0em;
     margin: 0 auto;
@@ -110,6 +113,7 @@ html {
         font-size: 40px;
     }
 }
+
 .section-1 {
     height: 672px;
     z-index: 1;
@@ -139,50 +143,45 @@ html {
     }
 }
 
-
-
 .section-2 {
     background: #f3f3f3;
     height: auto;
     z-index: 2;
     position: relative;
     text-align: center;
-    .content-text{
+    .content-text {
         width: 50%;
         margin: 0 auto;
     }
-    h2{
+    h2 {
         font-family: 'Roboto', sans-serif;
         padding: 2em 0 1em;
         color: #313131;
-
     }
-    p{
+    p {
         color: #313131;
-        font-family: 'Helvetica',sans-serif;
+        font-family: 'Helvetica', sans-serif;
         font-size: 12px;
         line-height: 16px;
-
     }
-    .works{
+    .works {
         width: 100%;
     }
-    .featured-work{
+    .featured-work {
         height: 600px;
         width: 100%;
     }
-    .work{
+    .work {
         width: 100%;
         height: 600px;
-
     }
-    .work-1{
+    .work-1 {
         background: url(../images/gnnp.jpg)no-repeat;
         background-size: cover;
         background-position: top;
         position: relative;
-        .hover{
-            background: rgba(0,0,0,0.70);
+        .hover {
+            background: rgba(0, 0, 0, 0.70);
             width: 100%;
             height: 100%;
             position: absolute;
@@ -191,36 +190,104 @@ html {
             opacity: 0;
             z-index: 2;
         }
-        &:hover + .hover{
+        &:hover + .hover {
             opacity: 1;
         }
-
-
     }
-    .past-works{
+    .past-works {
         width: 100%;
         height: 300px;
-        div{
-            width:33.333%;
+        div {
+            width: 33.333%;
             height: 300px;
             display: inline-block;
             float: left;
-            &.work-1{
+            &.work-1 {
                 background: url(../images/c1.jpg)no-repeat;
                 background-size: cover;
                 background-position: top;
             }
-
-            &.work-2{
+            &.work-2 {
                 background: url(../images/abv.jpg)no-repeat;
                 background-size: cover;
                 background-position: top;
             }
-            &.work-3{
+            &.work-3 {
                 background: url(../images/skyrocket-starterkit.jpg)no-repeat;
                 background-size: cover;
                 background-position: top;
             }
         }
     }
+}
+
+.section-3 {
+    background: #f3f3f3;
+    height: auto;
+    z-index: 2;
+    position: relative;
+    padding-top: 4em;
+    text-align: center;
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        padding: 2em 0 1em;
+        color: #313131;
+    }
+    p {
+        color: #313131;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .experience-wrapper {
+        width: 100%;
+        .company {
+            height: 150px;
+            width: 100%;
+            .logo{
+                position: relative;
+                z-index: 3;
+                vertical-align: middle;
+                padding: 2em 0px;
+                img{
+                    height: 82px;
+                }
+            }
+            .filter-1 {
+                background: rgba(0, 0, 0, 0.50);
+                position: absolute;
+                z-index: 2;
+                height: 150px;
+                width: 100%;
+            }
+            .filter-2{
+                background: rgba(71, 95, 119, 0.40);
+                position: absolute;
+                z-index: 2;
+                height: 150px;
+                width: 100%;
+
+            }
+            &.company-1 {
+                background: url(../images/dotty-bg.jpg)no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            &.company-2 {
+                background: url(../images/skyrocket-bg.png)no-repeat;
+                background-size: cover;
+                background-position: center;
+                .logo{
+                    padding: 2.7em 0px;
+                    img{
+                        height: 61px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.contact-me{
+    
 }

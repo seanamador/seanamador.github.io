@@ -33,7 +33,7 @@ html {
   margin: 0 auto; }
 
 .filter-1 {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   position: fixed;
   z-index: 2;
   height: 672px;
@@ -72,7 +72,7 @@ html {
   .hero-section p {
     text-align: center;
     color: #f3f3f3;
-    font-family: 'Helvetica',sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-weight: 100;
     line-height: 24px; }
 
@@ -139,7 +139,7 @@ html {
     color: #313131; }
   .section-2 p {
     color: #313131;
-    font-family: 'Helvetica',sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-size: 12px;
     line-height: 16px; }
   .section-2 .works {
@@ -186,5 +186,58 @@ html {
         background: url(../images/skyrocket-starterkit.jpg) no-repeat;
         background-size: cover;
         background-position: top; }
+
+.section-3 {
+  background: #f3f3f3;
+  height: auto;
+  z-index: 2;
+  position: relative;
+  padding-top: 4em;
+  text-align: center; }
+  .section-3 h2 {
+    font-family: 'Roboto', sans-serif;
+    padding: 2em 0 1em;
+    color: #313131; }
+  .section-3 p {
+    color: #313131;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 12px;
+    line-height: 16px; }
+  .section-3 .experience-wrapper {
+    width: 100%; }
+    .section-3 .experience-wrapper .company {
+      height: 150px;
+      width: 100%; }
+      .section-3 .experience-wrapper .company .logo {
+        position: relative;
+        z-index: 3;
+        vertical-align: middle;
+        padding: 2em 0px; }
+        .section-3 .experience-wrapper .company .logo img {
+          height: 82px; }
+      .section-3 .experience-wrapper .company .filter-1 {
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        z-index: 2;
+        height: 150px;
+        width: 100%; }
+      .section-3 .experience-wrapper .company .filter-2 {
+        background: rgba(71, 95, 119, 0.4);
+        position: absolute;
+        z-index: 2;
+        height: 150px;
+        width: 100%; }
+      .section-3 .experience-wrapper .company.company-1 {
+        background: url(../images/dotty-bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .section-3 .experience-wrapper .company.company-2 {
+        background: url(../images/skyrocket-bg.png) no-repeat;
+        background-size: cover;
+        background-position: center; }
+        .section-3 .experience-wrapper .company.company-2 .logo {
+          padding: 2.7em 0px; }
+          .section-3 .experience-wrapper .company.company-2 .logo img {
+            height: 61px; }
 
 /*# sourceMappingURL=style.css.map */
