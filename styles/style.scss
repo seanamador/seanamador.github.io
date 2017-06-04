@@ -14,13 +14,12 @@ html {
 
 .background-video {
     position: fixed;
-    top: 50%;
+    top: 27%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 672px;
     width: auto;
     height: auto;
-    z-index: -100;
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
     transition: 1s opacity;
@@ -32,12 +31,15 @@ html {
     width: 100%;
     position: relative;
 }
-
+.content-wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+}
 .filter-1 {
     background: rgba(0, 0, 0, 0.50);
     position: fixed;
     z-index: 2;
-    height: 75vh;
+    height: 672px;
     width: 100%;
 }
 
@@ -45,11 +47,11 @@ html {
     background: rgba(71, 95, 119, 0.40);
     position: fixed;
     z-index: 2;
-    height: 75vh;
+    height: 672px;
     width: 100%;
 }
 
-.hero-section{
+.hero-section {
     width: 40%;
     margin: 0 auto;
     height: 100%;
@@ -75,49 +77,150 @@ html {
         font-weight: 500;
         margin: 1em 0;
     }
-    p{
+    p {
         text-align: center;
         color: #f3f3f3;
-        font-family: 'Helvetica';
+        font-family: 'Helvetica',sans-serif;
         font-weight: 100;
         line-height: 24px;
     }
 }
-
+.content-selector {
+    padding: 3em 0em;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    .dev,
+    .film {
+        display: inline;
+        margin: 0em 2em;
+        opacity: .50;
+        &.active {
+            opacity: 1;
+        }
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    i {
+        color: #313131;
+        display: inline;
+        font-size: 40px;
+    }
+}
 .section-1 {
-    height: 75vh;
+    height: 672px;
     z-index: 1;
     width: 100%;
-    .content-selector{
+    .content-selector {
         padding: 6em 0em;
         margin: 0 auto;
         text-align: center;
-        .dev, .film{
+        .dev,
+        .film {
             display: inline;
             margin: 0em 2em;
             opacity: .28;
-            &.active{
+            &.active {
                 opacity: 1;
             }
-            &:hover{
+            &:hover {
                 opacity: 1;
                 cursor: pointer;
-
             }
         }
-        i{
+        i {
             color: #f3f3f3;
             display: inline;
             font-size: 40px;
-            
-
         }
     }
 }
 
+
+
 .section-2 {
     background: #f3f3f3;
-    height: 100vh;
+    height: auto;
     z-index: 2;
     position: relative;
+    text-align: center;
+    .content-text{
+        width: 50%;
+        margin: 0 auto;
+    }
+    h2{
+        font-family: 'Roboto', sans-serif;
+        padding: 2em 0 1em;
+        color: #313131;
+
+    }
+    p{
+        color: #313131;
+        font-family: 'Helvetica',sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+
+    }
+    .works{
+        width: 100%;
+    }
+    .featured-work{
+        height: 600px;
+        width: 100%;
+    }
+    .work{
+        width: 100%;
+        height: 600px;
+
+    }
+    .work-1{
+        background: url(../images/gnnp.jpg)no-repeat;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        .hover{
+            background: rgba(0,0,0,0.70);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 2;
+        }
+        &:hover + .hover{
+            opacity: 1;
+        }
+
+
+    }
+    .past-works{
+        width: 100%;
+        height: 300px;
+        div{
+            width:33.333%;
+            height: 300px;
+            display: inline-block;
+            float: left;
+            &.work-1{
+                background: url(../images/c1.jpg)no-repeat;
+                background-size: cover;
+                background-position: top;
+            }
+
+            &.work-2{
+                background: url(../images/abv.jpg)no-repeat;
+                background-size: cover;
+                background-position: top;
+            }
+            &.work-3{
+                background: url(../images/skyrocket-starterkit.jpg)no-repeat;
+                background-size: cover;
+                background-position: top;
+            }
+        }
+    }
 }

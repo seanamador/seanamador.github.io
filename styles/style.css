@@ -12,13 +12,12 @@ html {
 
 .background-video {
   position: fixed;
-  top: 50%;
+  top: 27%;
   left: 50%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 672px;
   width: auto;
   height: auto;
-  z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
   transition: 1s opacity;
@@ -29,18 +28,22 @@ html {
   width: 100%;
   position: relative; }
 
+.content-wrapper {
+  max-width: 1280px;
+  margin: 0 auto; }
+
 .filter-1 {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   z-index: 2;
-  height: 75vh;
+  height: 672px;
   width: 100%; }
 
 .filter-2 {
   background: rgba(71, 95, 119, 0.4);
   position: fixed;
   z-index: 2;
-  height: 75vh;
+  height: 672px;
   width: 100%; }
 
 .hero-section {
@@ -69,25 +72,51 @@ html {
   .hero-section p {
     text-align: center;
     color: #f3f3f3;
-    font-family: 'Helvetica';
+    font-family: 'Helvetica',sans-serif;
     font-weight: 100;
     line-height: 24px; }
 
+.content-selector {
+  padding: 3em 0em;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 2;
+  position: relative; }
+  .content-selector .dev,
+  .content-selector .film {
+    display: inline;
+    margin: 0em 2em;
+    opacity: .50; }
+    .content-selector .dev.active,
+    .content-selector .film.active {
+      opacity: 1; }
+    .content-selector .dev:hover,
+    .content-selector .film:hover {
+      opacity: 1;
+      cursor: pointer; }
+  .content-selector i {
+    color: #313131;
+    display: inline;
+    font-size: 40px; }
+
 .section-1 {
-  height: 75vh;
+  height: 672px;
   z-index: 1;
   width: 100%; }
   .section-1 .content-selector {
     padding: 6em 0em;
     margin: 0 auto;
     text-align: center; }
-    .section-1 .content-selector .dev, .section-1 .content-selector .film {
+    .section-1 .content-selector .dev,
+    .section-1 .content-selector .film {
       display: inline;
       margin: 0em 2em;
       opacity: .28; }
-      .section-1 .content-selector .dev.active, .section-1 .content-selector .film.active {
+      .section-1 .content-selector .dev.active,
+      .section-1 .content-selector .film.active {
         opacity: 1; }
-      .section-1 .content-selector .dev:hover, .section-1 .content-selector .film:hover {
+      .section-1 .content-selector .dev:hover,
+      .section-1 .content-selector .film:hover {
         opacity: 1;
         cursor: pointer; }
     .section-1 .content-selector i {
@@ -97,8 +126,65 @@ html {
 
 .section-2 {
   background: #f3f3f3;
-  height: 100vh;
+  height: auto;
   z-index: 2;
-  position: relative; }
+  position: relative;
+  text-align: center; }
+  .section-2 .content-text {
+    width: 50%;
+    margin: 0 auto; }
+  .section-2 h2 {
+    font-family: 'Roboto', sans-serif;
+    padding: 2em 0 1em;
+    color: #313131; }
+  .section-2 p {
+    color: #313131;
+    font-family: 'Helvetica',sans-serif;
+    font-size: 12px;
+    line-height: 16px; }
+  .section-2 .works {
+    width: 100%; }
+  .section-2 .featured-work {
+    height: 600px;
+    width: 100%; }
+  .section-2 .work {
+    width: 100%;
+    height: 600px; }
+  .section-2 .work-1 {
+    background: url(../images/gnnp.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    position: relative; }
+    .section-2 .work-1 .hover {
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 2; }
+    .section-2 .work-1:hover + .hover {
+      opacity: 1; }
+  .section-2 .past-works {
+    width: 100%;
+    height: 300px; }
+    .section-2 .past-works div {
+      width: 33.333%;
+      height: 300px;
+      display: inline-block;
+      float: left; }
+      .section-2 .past-works div.work-1 {
+        background: url(../images/c1.jpg) no-repeat;
+        background-size: cover;
+        background-position: top; }
+      .section-2 .past-works div.work-2 {
+        background: url(../images/abv.jpg) no-repeat;
+        background-size: cover;
+        background-position: top; }
+      .section-2 .past-works div.work-3 {
+        background: url(../images/skyrocket-starterkit.jpg) no-repeat;
+        background-size: cover;
+        background-position: top; }
 
 /*# sourceMappingURL=style.css.map */
