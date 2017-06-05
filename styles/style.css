@@ -239,5 +239,41 @@ html {
           padding: 2.7em 0px; }
           .section-3 .experience-wrapper .company.company-2 .logo img {
             height: 61px; }
+      .section-3 .experience-wrapper .company.company-3 {
+        background: url(../images/xml-bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center; }
+      .section-3 .experience-wrapper .company.company-4 {
+        background: url(../images/teamops-bg.png) no-repeat;
+        background-size: cover;
+        background-position: center; }
+
+.contact-me {
+  height: 450px;
+  background: #f3f3f3;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  opacity: 1;
+  position: relative;
+  z-index: 3; }
+  .contact-me .contact-bg {
+    background-size: cover;
+    background-position: center -150px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2; }
+
+footer {
+  background: #282828;
+  width: 100%;
+  height: 60px; }
+  footer p {
+    color: #f3f3f3;
+    font-family: 'Helvetica Nueue', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    font-weight: 100; }
 
 /*# sourceMappingURL=style.css.map */
