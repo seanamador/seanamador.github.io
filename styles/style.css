@@ -1,7 +1,9 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica', sans-serif; }
+  font-family: 'Helvetica', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 body,
 html {
@@ -120,7 +122,7 @@ html {
   padding: 10vh 0;
   z-index: 4; }
   .hero-section .logo {
-    margin: 0 auto 100px;
+    margin: 0 auto 40px;
     text-align: center; }
     .hero-section .logo img {
       text-align: center;
@@ -131,16 +133,47 @@ html {
     color: #f3f3f3;
     font-size: 30px;
     text-align: center;
-    font-family: 'Helvetica';
-    letter-spacing: 2px;
-    font-weight: 500;
-    margin: 1em 0; }
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin-bottom: .2em; }
+  .hero-section h2 {
+    color: #f3f3f3;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 4px;
+    font-weight: 100;
+    opacity: 0.5; }
   .hero-section p {
     text-align: center;
     color: #f3f3f3;
     font-family: 'Helvetica', sans-serif;
     font-weight: 100;
     line-height: 24px; }
+  .hero-section .buttons {
+    margin: 2em 0; }
+    .hero-section .buttons .letstalk {
+      margin: 0 auto;
+      text-align: center; }
+      .hero-section .buttons .letstalk .btn {
+        width: 200px;
+        height: auto;
+        margin: 0 auto;
+        border: 1px #f3f3f3 solid;
+        border-radius: 10px;
+        padding: 1em 0; }
+        .hero-section .buttons .letstalk .btn i {
+          color: #f3f3f3;
+          font-size: 25px;
+          margin-right: 14px;
+          display: inline-block; }
+      .hero-section .buttons .letstalk p {
+        color: #f3f3f3;
+        font-family: 'Helvetica', sans-serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+        display: inline-block; }
 
 .content-selector {
   padding: 3em 0em;
@@ -174,7 +207,7 @@ html {
   z-index: 1;
   width: 100%; }
   .section-1 .content-selector {
-    padding: 6em 0em;
+    padding: 3em 0em;
     margin: 0 auto;
     text-align: center; }
     .section-1 .content-selector .devNav,
@@ -214,8 +247,8 @@ html {
   .section-2 p {
     color: #313131;
     font-family: 'Helvetica', sans-serif;
-    font-size: 12px;
-    line-height: 16px; }
+    font-size: 16px;
+    line-height: 18px; }
   .section-2 .works {
     width: 100%; }
   .section-2 .all-work {

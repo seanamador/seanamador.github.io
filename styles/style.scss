@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     font-family: 'Helvetica', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -145,7 +147,7 @@ html {
     padding: 10vh 0;
     z-index: 4;
     .logo {
-        margin: 0 auto 100px;
+        margin: 0 auto 40px;
         text-align: center;
         img {
             text-align: center;
@@ -158,10 +160,21 @@ html {
         color: #f3f3f3;
         font-size: 30px;
         text-align: center;
-        font-family: 'Helvetica';
-        letter-spacing: 2px;
-        font-weight: 500;
-        margin: 1em 0;
+        font-family: 'Helvetica', sans-serif;
+        letter-spacing: 4px;
+        font-weight: 100;
+        margin-bottom: .2em;
+        
+    }
+    h2 {
+        color: #f3f3f3;
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Helvetica', sans-serif;
+        letter-spacing: 4px;
+        font-weight: 100;
+        opacity: 0.5;
+        
     }
     p {
         text-align: center;
@@ -169,6 +182,34 @@ html {
         font-family: 'Helvetica', sans-serif;
         font-weight: 100;
         line-height: 24px;
+    }
+    .buttons {
+        margin: 2em 0;
+        .letstalk {
+            margin: 0 auto;
+            text-align: center;
+            .btn {
+                width: 200px;
+                height: auto;
+                margin: 0 auto;
+                border: 1px #f3f3f3 solid;
+                border-radius: 10px;
+                padding: 1em 0;
+                i {
+                    color: #f3f3f3;
+                    font-size: 25px;
+                    margin-right: 14px;
+                    display: inline-block;
+                }
+            }
+            p {
+                color: #f3f3f3;
+                font-family: 'Helvetica', sans-serif;
+                font-size: 18px;
+                letter-spacing: 2px;
+                display: inline-block;
+            }
+        }
     }
 }
 
@@ -207,7 +248,7 @@ html {
     z-index: 1;
     width: 100%;
     .content-selector {
-        padding: 6em 0em;
+        padding: 3em 0em;
         margin: 0 auto;
         text-align: center;
         .devNav,
@@ -253,8 +294,8 @@ html {
     p {
         color: #313131;
         font-family: 'Helvetica', sans-serif;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 16px;
+        line-height: 18px;
     }
     .works {
         width: 100%;
