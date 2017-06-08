@@ -14,7 +14,8 @@ $(document).ready(function() {
     tl.set('.film', { className: "+=hide" })
     menu();
     smoothScroll();
-    
+    whatido();
+    fixedMenu();
     // tl.set('.wrapper',{scale: 0.9, opacity: 0})
 });
 $(window).bind("load", function() {
@@ -73,4 +74,49 @@ function smoothScroll() {
 
     });
 
+}
+
+function whatido() {
+    var text = $('.whatido > .text');
+    var tlR = new TimelineMax({ repeat: -1 });
+    console.log('w');
+    tlR
+        .set(text, { opacity: 0 })
+        .to('.text-1', 1, { opacity: 1, ease: Expo.easeInOut }, )
+        .to('.text-1', 1, { opacity: 0, ease: Expo.easeInOut }, 4)
+
+    .to('.text-2', 1, { opacity: 1, ease: Expo.easeInOut }, 4.5)
+        .to('.text-2', 1, { opacity: 0, ease: Expo.easeInOut }, 6.5)
+
+    .to('.text-3', 1, { opacity: 1, ease: Expo.easeInOut }, 7)
+        .to('.text-3', 1, { opacity: 0, ease: Expo.easeInOut }, 9)
+
+    .to('.text-4', 1, { opacity: 1, ease: Expo.easeInOut }, 9.5)
+        .to('.text-4', 1, { opacity: 0, ease: Expo.easeInOut }, 11.5)
+
+    .to('.text-5', 1, { opacity: 1, ease: Expo.easeInOut }, 12)
+        .to('.text-5', 1, { opacity: 0, ease: Expo.easeInOut }, 14.5)
+
+    .to('.text-6', 1, { opacity: 1, ease: Expo.easeInOut }, 15)
+        .to('.text-6', 1, { opacity: 0, ease: Expo.easeInOut }, 17)
+
+    .to('.text-7', 1, { opacity: 1, ease: Expo.easeInOut }, 17.5)
+        .to('.text-7', 1, { opacity: 0, ease: Expo.easeInOut }, 19.5)
+
+
+
+}
+
+function fixedMenu() {
+    var distance = $('.section-2').offset().top,
+        $window = $(window);
+
+    $window.scroll(function() {
+        if ($window.scrollTop() >= distance) {
+            console.log('top');
+            $('.content-selector-wrapper').addClass('scrolled');
+        }else{
+            $('.content-selector-wrapper').removeClass('scrolled');
+        }
+    });
 }

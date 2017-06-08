@@ -123,8 +123,24 @@ html {
     margin: 0 auto;
 }
 
+.filter-noise {
+    background: url(../images/filter-noise.png) repeat;
+    position: fixed;
+    z-index: 2;
+    height: 672px;
+    width: 100%;
+}
+
+.filter-pattern {
+    background: url(../images/filter-pattern.png) repeat;
+    position: fixed;
+    z-index: 2;
+    height: 672px;
+    width: 100%;
+}
+
 .filter-1 {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     position: fixed;
     z-index: 2;
     height: 672px;
@@ -164,7 +180,6 @@ html {
         letter-spacing: 4px;
         font-weight: 100;
         margin-bottom: .2em;
-        
     }
     h2 {
         color: #f3f3f3;
@@ -174,7 +189,6 @@ html {
         letter-spacing: 4px;
         font-weight: 100;
         opacity: 0.5;
-        
     }
     p {
         text-align: center;
@@ -195,11 +209,28 @@ html {
                 border: 1px #f3f3f3 solid;
                 border-radius: 10px;
                 padding: 1em 0;
+                -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                transition: all .7s cubic-bezier(1, 0, 0, 1);
                 i {
                     color: #f3f3f3;
                     font-size: 25px;
                     margin-right: 14px;
                     display: inline-block;
+                    -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                    transition: all .7s cubic-bezier(1, 0, 0, 1);
+                }
+                &:hover {
+                    cursor: pointer;
+                    background: #f3f3f3;
+                    -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                    transition: all .7s cubic-bezier(1, 0, 0, 1);
+                    p,
+                    i {
+                        color: #313131;
+                        opacity: 0.8;
+                        -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                        transition: all .7s cubic-bezier(1, 0, 0, 1);
+                    }
                 }
             }
             p {
@@ -208,8 +239,59 @@ html {
                 font-size: 18px;
                 letter-spacing: 2px;
                 display: inline-block;
+                -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                transition: all .7s cubic-bezier(1, 0, 0, 1);
             }
         }
+    }
+    .whatido {
+        text-align: center;
+        margin: 2em auto 0;
+        height: 65px;
+        h3 {
+            color: #f3f3f3;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            display: inline-block;
+            padding-bottom: .25em;
+        }
+        p {
+            color: #f3f3f3;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    }
+}
+
+.content-selector-wrapper {
+    -webkit-transform: translate3d(0px, -90px, 0px) scale(1);
+    -moz-transform: translate3d(0px, -90px, 0px) scale(1);
+    -ms-transform: translate3d(0px, -90px, 0px) scale(1);
+    transform: translate3d(0px, -90px, 0px) scale(1);
+    -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+        transition: all .7s cubic-bezier(1, 0, 0, 1);
+    height: 90px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: fixed;
+    &.scrolled{
+        -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
+    -moz-transform: translate3d(0px, 0px, 0px) scale(1);
+    -ms-transform: translate3d(0px, 0px, 0px) scale(1);
+    transform: translate3d(0px, 0px, 0px) scale(1);
+    -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+        transition: all .7s cubic-bezier(1, 0, 0, 1);
     }
 }
 
@@ -221,6 +303,7 @@ html {
     position: relative;
     .dev,
     .film {
+        background: none;
         display: inline;
         margin: 0em 2em;
         opacity: .50;
@@ -241,6 +324,7 @@ html {
         display: inline;
         font-size: 40px;
     }
+    &.selector-2 {}
 }
 
 .section-1 {
@@ -295,7 +379,7 @@ html {
         color: #313131;
         font-family: 'Helvetica', sans-serif;
         font-size: 16px;
-        line-height: 18px;
+        line-height: 18 px;
     }
     .works {
         width: 100%;
