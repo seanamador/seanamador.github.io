@@ -79,7 +79,7 @@ function smoothScroll() {
 function whatido() {
     var text = $('.whatido > .text');
     var tlR = new TimelineMax({ repeat: -1 });
-    console.log('w');
+    
     tlR
         .set(text, { opacity: 0 })
         .to('.text-1', 1, { opacity: 1, ease: Expo.easeInOut }, )
@@ -107,8 +107,8 @@ function whatido() {
 
 }
 
-function fixedMenu() {
-    var distance = $('.section-2').offset().top,
+$(window).scroll(function() {
+ var distance = $('.scroll-detect').offset().top,
         $window = $(window);
 
     $window.scroll(function() {
@@ -119,4 +119,24 @@ function fixedMenu() {
             $('.content-selector-wrapper').removeClass('scrolled');
         }
     });
+ });
+function fixedMenu() {
+
+    $('.scroll-detect').scroll(function() {
+        var pos = $('.scroll-detect').scrollTop();
+        if (pos == 0) {
+            console.log('top of the div');
+        }
+    });
+    // var distance = $('.scroll-detect').offset().top,
+    //     $window = $(window);
+
+    // $window.scroll(function() {
+    //     if ($window.scrollTop() >= distance) {
+    //         console.log('top');
+    //         $('.content-selector-wrapper').addClass('scrolled');
+    //     }else{
+    //         $('.content-selector-wrapper').removeClass('scrolled');
+    //     }
+    // });
 }
