@@ -15,14 +15,14 @@ $(document).ready(function() {
     menu();
     smoothScroll();
     whatido();
-    fixedMenu();
+    // fixedMenu();
     // tl.set('.wrapper',{scale: 0.9, opacity: 0})
 });
-$(window).bind("load", function() {
-    $('.wrapper').removeClass('hide');
-    // tl.to('.wrapper',1,{scale: 1, opacity: 1, ease: Expo.easeInOut});
-    $('.loader').hide();
-});
+// $(window).bind("load", function() {
+//     $('.wrapper').removeClass('hide');
+//     // tl.to('.wrapper',1,{scale: 1, opacity: 1, ease: Expo.easeInOut});
+//     $('.loader').hide();
+// });
 
 
 function menu() {
@@ -107,36 +107,16 @@ function whatido() {
 
 }
 
-$(window).scroll(function() {
- var distance = $('.scroll-detect').offset().top,
-        $window = $(window);
+// $(window).scroll(function() {
+//  var distance = $('.scroll-detect').offset().top,
+//         $window = $(window);
 
-    $window.scroll(function() {
-        if ($window.scrollTop() >= distance) {
-            console.log('top');
-            $('.content-selector-wrapper').addClass('scrolled');
-        }else{
-            $('.content-selector-wrapper').removeClass('scrolled');
-        }
-    });
- });
-function fixedMenu() {
-
-    $('.scroll-detect').scroll(function() {
-        var pos = $('.scroll-detect').scrollTop();
-        if (pos == 0) {
-            console.log('top of the div');
-        }
-    });
-    // var distance = $('.scroll-detect').offset().top,
-    //     $window = $(window);
-
-    // $window.scroll(function() {
-    //     if ($window.scrollTop() >= distance) {
-    //         console.log('top');
-    //         $('.content-selector-wrapper').addClass('scrolled');
-    //     }else{
-    //         $('.content-selector-wrapper').removeClass('scrolled');
-    //     }
-    // });
-}
+//     $window.scroll(function() {
+//         if ($window.scrollTop() >= distance) {
+//             console.log('top');
+//             $('.content-selector-wrapper').addClass('scrolled');
+//         }else{
+//             $('.content-selector-wrapper').removeClass('scrolled');
+//         }
+//     });
+//  });

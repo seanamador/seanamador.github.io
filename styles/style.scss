@@ -14,7 +14,27 @@ html {
     width: 100%;
     background: #313131!important;
 }
+body > :not(.pace),body:before,body:after {
+  -webkit-transition:opacity 1s ease-in-out;
+  -moz-transition:opacity 1s ease-in-out;
+  -o-transition:opacity 1s ease-in-out;
+  -ms-transition:opacity 1s ease-in-out;
+  transition:opacity 1s ease-in-out;
+  overflow: auto;
+  height: auto;
+}
 
+body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-done):after {
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition:opacity 1s ease-in-out;
+  -moz-transition:opacity 1s ease-in-out;
+  -o-transition:opacity 1s ease-in-out;
+  -ms-transition:opacity 1s ease-in-out;
+  transition:opacity 1s ease-in-out;
+
+}
 .loader {
     width: 400px;
     height: 400px;
@@ -136,7 +156,7 @@ html {
     background: url(../images/filter-pattern.png) repeat;
     position: fixed;
     z-index: 2;
-    height: 672px;
+    height: 100vh;
     width: 100%;
 }
 
@@ -144,7 +164,7 @@ html {
     background: rgba(0, 0, 0, 0.6);
     position: fixed;
     z-index: 2;
-    height: 672px;
+    height: 100vh ;
     width: 100%;
 }
 
@@ -201,6 +221,12 @@ html {
         font-family: 'Helvetica', sans-serif;
         font-weight: 100;
         line-height: 24px;
+    }
+    .film{
+        background: none;
+        h2{
+            padding: 0;
+        }
     }
     .buttons {
         margin: 2em 0;
@@ -512,9 +538,12 @@ html {
     }
     .experience-wrapper {
         width: 100%;
+        height: 800px;
+        display: inline-block;
         .company {
-            height: 150px;
-            width: 100%;
+            height: 350px;
+            width: 50%;
+            float: left;
             position: relative;
             -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
             transition: all .7s cubic-bezier(1, 0, 0, 1);
@@ -522,7 +551,7 @@ html {
                 position: relative;
                 z-index: 3;
                 vertical-align: middle;
-                padding: 2em 0px;
+                padding: 8.24em 0px;
                 -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
                 transition: all .7s cubic-bezier(1, 0, 0, 1);
                 img {
@@ -533,8 +562,9 @@ html {
                 background: rgba(0, 0, 0, 0.7);
                 position: absolute;
                 z-index: 2;
-                height: 150px;
+                height: 350px;
                 width: 100%;
+                float: left;
                 -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
                 transition: all .7s cubic-bezier(1, 0, 0, 1);
             }
@@ -542,19 +572,21 @@ html {
                 background: rgba(71, 95, 119, 0.40);
                 position: absolute;
                 z-index: 2;
-                height: 150px;
+                height: 350px;
                 width: 100%;
+                float: left;
             }
             .filter-3 {
                 background: rgba(0, 0, 0, 0.2);
                 position: absolute;
                 z-index: 2;
-                height: 0;
+                height: 100%;
                 width: 100%;
-                -webkit-transform: translate3d(0px, 150px, 0px) scale(1);
-                -moz-transform: translate3d(0px, 150px, 0px) scale(1);
-                -ms-transform: translate3d(0px, 150px, 0px) scale(1);
-                transform: translate3d(0px, 150px, 0px) scale(1);
+                opacity: 0;
+                // -webkit-trans    form: translate3d(0px, 350px, 0px) scale(1);
+                // -moz-transform: translate3d(0px, 350px, 0px) scale(1);
+                // -ms-transform: translate3d(0px, 350px, 0px) scale(1);
+                // transform: translate3d(0px, 350px, 0px) scale(1);
                 -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
                 transition: all .7s cubic-bezier(1, 0, 0, 1);
             }
@@ -568,7 +600,7 @@ html {
                 background-size: cover;
                 background-position: center;
                 .logo {
-                    padding: 2.7em 0px;
+                    padding: 8.9em 0px;
                     img {
                         height: 61px;
                     }
@@ -596,10 +628,10 @@ html {
                 z-index: 3;
                 margin: auto;
                 vertical-align: middle;
-                -webkit-transform: translate3d(0px, 75px, 0px) rotateX(90deg) scale(1);
-                -moz-transform: translate3d(0px, 75px, 0px) rotateX(90deg) scale(1);
-                -ms-transform: translate3d(0px, 75px, 0px) rotateX(90deg) scale(1);
-                transform: translate3d(0px, 75px, 0px) rotateX(90deg) scale(1);
+                -webkit-transform: translate3d(0px, 120px, 0px) rotateX(0deg) scale(1);
+                -moz-transform: translate3d(0px, 120px, 0px) rotateX(0deg) scale(1);
+                -ms-transform: translate3d(0px, 120px, 0px) rotateX(0deg) scale(1);
+                transform: translate3d(0px, 120px, 0px) rotateX(0deg) scale(1);
                 -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
                 transition: all .7s cubic-bezier(1, 0, 0, 1);
                 .description-wrapper {
@@ -622,38 +654,38 @@ html {
                     letter-spacing: 1px;
                 }
             }
-            // &:hover {
-            //     cursor: pointer;
-            //     -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
-            //     transition: all .7s cubic-bezier(1, 0, 0, 1);
-            // }
-            // &:hover .logo {
-            //     opacity: 0;
-            //     -webkit-transform: translate3d(0px, -75px, 0px) rotateX(-90deg) scale(1);
-            //     -moz-transform: translate3d(0px, -75px, 0px) rotateX(-90deg) scale(1);
-            //     -ms-transform: translate3d(0px, -75px, 0px) rotateX(-90deg) scale(1);
-            //     transform: translate3d(0px, -75px, 0px) rotateX(-90deg) scale(1);
-            //     -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
-            //     transition: all .7s cubic-bezier(1, 0, 0, 1);
-            // }
-            // &:hover .filter-3 {
-            //     height: 150px;
-            //     -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
-            //     -moz-transform: translate3d(0px, 0px, 0px) scale(1);
-            //     -ms-transform: translate3d(0px, 0px, 0px) scale(1);
-            //     transform: translate3d(0px, 0px, 0px) scale(1);
-            //     -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
-            //     transition: all .7s cubic-bezier(1, 0, 0, 1);
-            // }
-            // &:hover .description {
-            //     opacity: 1;
-            //     -webkit-transform: translate3d(0px, 0px, 0px) rotateX(0deg) scale(1);
-            //     -moz-transform: translate3d(0px, 0px, 0px) rotateX( 0deg) scale(1);
-            //     -ms-transform: translate3d(0px, 0px, 0px) rotateX(0deg) scale(1);
-            //     transform: translate3d(0px, 0px, 0px) rotateX(0deg) scale(1);
-            //     -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
-            //     transition: all .7s cubic-bezier(1, 0, 0, 1);
-            // }
+            &:hover {
+                cursor: pointer;
+                -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                transition: all .7s cubic-bezier(1, 0, 0, 1);
+            }
+            &:hover .logo {
+                -webkit-transform: translate3d(0px, -75px, 0px) rotateX(0deg) scale(1);
+                -moz-transform: translate3d(0px, -75px, 0px) rotateX(0deg) scale(1);
+                -ms-transform: translate3d(0px, -75px, 0px) rotateX(0deg) scale(1);
+                transform: translate3d(0px, -75px, 0px) rotateX(0deg) scale(1);
+                -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                transition: all .7s cubic-bezier(1, 0, 0, 1);
+            }
+            &:hover .filter-3 {
+                height: 350px;
+                opacity: 1;
+                -webkit-transform: translate3d(0px, 0px, 0px) scale(1);
+                -moz-transform: translate3d(0px, 0px, 0px) scale(1);
+                -ms-transform: translate3d(0px, 0px, 0px) scale(1);
+                transform: translate3d(0px, 0px, 0px) scale(1);
+                -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                transition: all .7s cubic-bezier(1, 0, 0, 1);
+            }
+            &:hover .description {
+                opacity: 1;
+                -webkit-transform: translate3d(0px, 45px, 0px) rotateX(0deg) scale(1);
+                -moz-transform: translate3d(0px, 45px, 0px) rotateX( 0deg) scale(1);
+                -ms-transform: translate3d(0px, 45px, 0px) rotateX(0deg) scale(1);
+                transform: translate3d(0px, 45px, 0px) rotateX(0deg) scale(1);
+                -webkit-transition: all .7s cubic-bezier(1, 0, 0, 1);
+                transition: all .7s cubic-bezier(1, 0, 0, 1);
+            }
         }
     }
 }
@@ -732,7 +764,7 @@ footer {
     }
 }
 
-section {
+section, div {
     &.hide {
         display: none;
     }

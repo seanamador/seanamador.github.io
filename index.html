@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Sean Michael Amador</title>
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <script src="js/pace.min.js"></script>
+    <link href="styles/dataurl.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/style.css">
     <!-- --Fonts-- -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,500,400italic,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -16,7 +18,7 @@
 </head>
 
 <body>
-    <div class="loader">
+<!--     <div class="loader">
         <div></div>
         <div></div>
         <div></div>
@@ -26,8 +28,8 @@
         <div></div>
         <div></div>
         <div></div>
-    </div>
-    <div class="wrapper hide">
+    </div> -->
+    <div class="wrapper">
         <div class="main-container">
             <!-- Start of Landing Page -->
             <section class="section-1">
@@ -36,15 +38,20 @@
                 <!-- <div class="filter filter-noise"></div> -->
                 <!-- <div class="filter filter-2"></div> -->
                 <video class="background-video" width="100%" autoplay loop mute>
-                    <source src="video/background-typing.mp4" type="video/mp4">
-                    <source src="video/background-typing.webm" type="video/webm">
+                    <source src="video/bg-video-new.mp4" type="video/mp4">
+                    <source src="video/bg-video-new.webm" type="video/webm">
                 </video>
                 <div class="hero-section">
                     <div class="logo">
                         <img src="images/logo.png" alt="">
                     </div>
                     <h1>Sean Michael Amador</h1>
-                    <h2>Developer X Designer</h2>
+                    <div class="developer">
+                        <h2>Developer X Designer</h2>
+                    </div>
+                    <div class="film">
+                        <h2>Photographer X Film Maker</h2>
+                    </div>
                     <!--  <div class="whatido">
                         <h3>I can do</h3>
                         <p class="text text-1">Web Development</p>
@@ -85,59 +92,57 @@
                     </div>
                 </div>
             </div>
-
             <section class="developer section-2 show">
-                <div class="content-wrapper">
-                    <div class="content-text">
-                        <h2>ABOUT ME</h2>
-                        <p>I’m Sean, a front-end developer and UI Designer from Philippines. I focus on Front- End Development. I also do Wordpress, Wordpresss theme creation, Banner Ads using GSAP Animation.</p>
-                    </div>
-                    <div class="works-wrapper">
-                        <h2>WORKS</h2>
-                        <div class="works">
-                            <div class="all-work">
-                                <div class="work work-1">
-                                    <div class="hover">
-                                        <div class="text-wrapper">
-                                            <div class="text-content">
-                                                <p>Gabi Na Naman Production
-                                                    <br> Web Design and Development</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work work-2">
-                                    <div class="hover">
-                                        <div class="text-wrapper">
-                                            <div class="text-content">
-                                                <p>C1 Signal Solutions
-                                                    <br> Web Design and Development</p>
-                                            </div>
-                                        </div>
-                                    </div>\s\   
-                                </div>
-                                <div class="work work-3">
-                                    <div class="hover">
-                                        <div class="text-wrapper">
-                                            <div class="text-content">
-                                                <p>ABV Website
-                                                    <br>Front End Web Development</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="work work-4">
-                                    <div class="hover">
-                                        <div class="text-wrapper">
-                                            <div class="text-content">
-                                                <p>Skyrocket Starter Kit
-                                                    <br>Front End Web Development</p>
-                                            </div>
+                <div class="content-text">
+                    <h2>ABOUT ME</h2>
+                    <p>I’m Sean, a front-end developer and UI Designer from Philippines. I focus on Front- End Development. I also do Wordpress, Wordpresss theme creation, Banner Ads using GSAP Animation.</p>
+                </div>
+                <div class="works-wrapper">
+                    <h2>WORKS</h2>
+                    <div class="works">
+                        <div class="all-work">
+                            <div class="work work-1">
+                                <div class="hover">
+                                    <div class="text-wrapper">
+                                        <div class="text-content">
+                                            <p>Gabi Na Naman Production
+                                                <br> Web Design and Development</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="past-works">
+                            <div class="work work-2">
+                                <div class="hover">
+                                    <div class="text-wrapper">
+                                        <div class="text-content">
+                                            <p>C1 Signal Solutions
+                                                <br> Web Design and Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work work-3">
+                                <div class="hover">
+                                    <div class="text-wrapper">
+                                        <div class="text-content">
+                                            <p>ABV Website
+                                                <br>Front End Web Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work work-4">
+                                <div class="hover">
+                                    <div class="text-wrapper">
+                                        <div class="text-content">
+                                            <p>Skyrocket Starter Kit
+                                                <br>Front End Web Development</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="past-works">
                                 <div class="work-1">
                                     <div class="hover">
                                         <div class="text-wrapper">
@@ -169,7 +174,6 @@
                                     </div>
                                 </div>
                             </div> -->
-                        </div>
                     </div>
                 </div>
             </section>
@@ -240,7 +244,7 @@
                     </div>
                 </div>
             </section>
-            <!--   <section class="film">
+            <section class="film">
                 <div class="content-selector">
                     <div class="dev active">
                         <i class="fa fa-code" aria-hidden="true"></i>
@@ -249,55 +253,53 @@
                         <i class="fa fa-camera-retro" aria-hidden="true"></i>
                     </div>
                 </div>
-                <div class="content-wrapper">
-                    <h2>PHOTOS</h2>
-                    <div class="landscapes">
-                        <h3>LANDSCAPES</h3>
-                        <div class="image-wrapper">
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/33691607303/in/dateposted-public/" title="Tutubi"><img src="https://c1.staticflickr.com/5/4183/33691607303_85e6add06c_k.jpg" alt="Tutubi"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/33296409104/in/dateposted-public/" title="Silanguin Cove"><img src="https://c1.staticflickr.com/3/2865/33296409104_4868eb8414_k.jpg" alt="Silanguin Cove"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30953576463/in/dateposted-public/" title="&quot;Mata ko ay nasilaw sa iyong ganda Antok at pagod tila nag laho Pagkagising panaginip ang dumalaw damdamin ko&#x27;y umaapaw&quot;  Ang Bandang Shirley - Umaapaw"><img src="https://c1.staticflickr.com/1/390/30953576463_686597ce97_k.jpg" alt="&quot;Mata ko ay nasilaw sa iyong ganda Antok at pagod tila nag laho Pagkagising panaginip ang dumalaw damdamin ko&#x27;y umaapaw&quot;  Ang Bandang Shirley - Umaapaw"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30800660792/in/dateposted-public/" title="Under your eyes in the city lights"><img src="https://c1.staticflickr.com/6/5562/30800660792_ea05aac29c_k.jpg" alt="Under your eyes in the city lights"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30859749036/in/dateposted-public/" title="Best thing about sunsets?   watching them with you"><img src="https://c1.staticflickr.com/6/5756/30859749036_61344dcc8f_k.jpg" alt="Best thing about sunsets?   watching them with you"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30812474325/in/dateposted-public/" title="Long exposure shot @ Cloud 9 Hotel/Resort/Sports and Leisure Club, Antipolo City"><img src="https://c1.staticflickr.com/6/5620/30812474325_c96ebe76c8_k.jpg" alt="Long exposure shot @ Cloud 9 Hotel/Resort/Sports and Leisure Club, Antipolo City"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30688930185/in/dateposted-public/" title="Sunset"><img src="https://c1.staticflickr.com/6/5505/30688930185_cd41bed1dd_k.jpg" alt="Sunset"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30652099556/in/dateposted-public/" title="The Beauty of Clouds from our office in Buendia"><img src="https://c1.staticflickr.com/6/5637/30652099556_e1bf971d80_k.jpg" alt="The Beauty of Clouds from our office in Buendia"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/29482441073/in/dateposted-public/" title="Sunset at Laguna de Bay"><img src="https://c1.staticflickr.com/9/8420/29482441073_54dad97b46_k.jpg" alt="Sunset at Laguna de Bay"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
-                            <div class="image">
-                                <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30004465171/in/dateposted-public/" title="Mt. Tagapo at Binangonan, Rizal"><img src="https://c1.staticflickr.com/9/8772/30004465171_b3bf36b38c_k.jpg" alt="Mt. Tagapo at Binangonan, Rizal"></a>
-                                <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-                            </div>
+                <h2>PHOTOS</h2>
+                <div class="landscapes">
+                    <h3>LANDSCAPES</h3>
+                    <div class="image-wrapper">
+                       <!--  <div class="image" style="background: url(https://c1.staticflickr.com/5/4183/33691607303_85e6add06c_k.jpg)">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/33691607303/in/dateposted-public/" title="Tutubi"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div> -->
+                       <!--  <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/33296409104/in/dateposted-public/" title="Silanguin Cove"><img src="https://c1.staticflickr.com/3/2865/33296409104_4868eb8414_k.jpg" alt="Silanguin Cove"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
                         </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30953576463/in/dateposted-public/" title="&quot;Mata ko ay nasilaw sa iyong ganda Antok at pagod tila nag laho Pagkagising panaginip ang dumalaw damdamin ko&#x27;y umaapaw&quot;  Ang Bandang Shirley - Umaapaw"><img src="https://c1.staticflickr.com/1/390/30953576463_686597ce97_k.jpg" alt="&quot;Mata ko ay nasilaw sa iyong ganda Antok at pagod tila nag laho Pagkagising panaginip ang dumalaw damdamin ko&#x27;y umaapaw&quot;  Ang Bandang Shirley - Umaapaw"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30800660792/in/dateposted-public/" title="Under your eyes in the city lights"><img src="https://c1.staticflickr.com/6/5562/30800660792_ea05aac29c_k.jpg" alt="Under your eyes in the city lights"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30859749036/in/dateposted-public/" title="Best thing about sunsets?   watching them with you"><img src="https://c1.staticflickr.com/6/5756/30859749036_61344dcc8f_k.jpg" alt="Best thing about sunsets?   watching them with you"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30812474325/in/dateposted-public/" title="Long exposure shot @ Cloud 9 Hotel/Resort/Sports and Leisure Club, Antipolo City"><img src="https://c1.staticflickr.com/6/5620/30812474325_c96ebe76c8_k.jpg" alt="Long exposure shot @ Cloud 9 Hotel/Resort/Sports and Leisure Club, Antipolo City"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30688930185/in/dateposted-public/" title="Sunset"><img src="https://c1.staticflickr.com/6/5505/30688930185_cd41bed1dd_k.jpg" alt="Sunset"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30652099556/in/dateposted-public/" title="The Beauty of Clouds from our office in Buendia"><img src="https://c1.staticflickr.com/6/5637/30652099556_e1bf971d80_k.jpg" alt="The Beauty of Clouds from our office in Buendia"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/29482441073/in/dateposted-public/" title="Sunset at Laguna de Bay"><img src="https://c1.staticflickr.com/9/8420/29482441073_54dad97b46_k.jpg" alt="Sunset at Laguna de Bay"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                        <div class="image">
+                            <a data-flickr-embed="true" href="https://www.flickr.com/photos/147709416@N07/30004465171/in/dateposted-public/" title="Mt. Tagapo at Binangonan, Rizal"><img src="https://c1.staticflickr.com/9/8772/30004465171_b3bf36b38c_k.jpg" alt="Mt. Tagapo at Binangonan, Rizal"></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div> -->
                     </div>
                 </div>
-            </section> -->
+            </section>
             <section class="contact-me">
                 <div class="contact-bg">
                 </div>
