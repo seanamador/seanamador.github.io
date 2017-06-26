@@ -35,6 +35,10 @@
   width: 100%;
   height: 10px;
   background: #475f77;
-
+-webkit-transition: all .7s ease-out;
+    -moz-transition: all .7s ease-out;
+    -o-transition: all .7s ease-out;
+    -ms-transition: all .7s ease-out;
+    transition: all .7s ease-out;
   pointer-events: none;
 }
